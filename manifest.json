@@ -1,0 +1,36 @@
+{
+  "name": "Simple Tabs",
+  "description": "Press Alt+Q to show a center overlay with tab previews",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "run_at": "document_start",
+      "css": ["styles.css"]
+    }
+  ],
+
+  "commands": {
+    "show-switcher-overlay": {
+      "suggested_key": {
+        "default": "Alt+Q"
+      },
+      "description": "Show the tab switcher overlay"
+    }
+  }
+}

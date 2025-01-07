@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Tab Switcher Popup</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            min-width: 300px;
+            min-height: 200px;
+            overflow: hidden;
+        }
+
+        #search {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        #tab-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .tab-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .tab-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .tab-thumbnail {
+            width: 48px;
+            height: 30px;
+            margin-right: 8px;
+            background: #ccc;
+            flex-shrink: 0;
+        }
+
+        .tab-title {
+            font-size: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="search" placeholder="Search Tabs..." />
+
+    <ul id="tab-list"></ul>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>

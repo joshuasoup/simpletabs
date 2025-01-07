@@ -1,0 +1,84 @@
+/* General tab item container */
+.tab-item {
+    display: flex;
+    flex-direction: column;
+    /* Stack image and text */
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    /* Reduced padding */
+    border-radius: 7px;
+    /* Reduced border radius */
+    /* Optional hover styles */
+}
+
+/* Tab preview image */
+.tab-preview {
+    width: 166px;
+    /* 2/3 of 250px */
+    height: 104px;
+    /* 2/3 of 156px */
+    object-fit: cover;
+    border-radius: 3px;
+    /* Reduced border radius */
+    filter: blur(0.33px);
+    /* Reduced blur */
+}
+
+/* Fallback for when there's no preview */
+.tab-preview-fallback {
+    width: 166px;
+    /* Match preview size */
+    height: 104px;
+    background: #666;
+    border-radius: 3px;
+    /* Reduced border radius */
+}
+
+/* Text container holding the favicon and title */
+.tab-text-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Reduced gap */
+    margin-top: 10px;
+    /* Reduced margin */
+}
+
+/* Favicon image */
+.tab-favicon {
+    width: 10px;
+    /* 2/3 of 16px */
+    height: 10px;
+    object-fit: contain;
+    /* Ensure it fits nicely */
+}
+
+/* Title */
+.tab-title {
+    display: block;
+    width: 133px;
+    /* 2/3 of 200px */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+    /* 2/3 of 14px */
+    font-family: Arial, sans-serif;
+    /* Use a generic font family */
+    font-weight: normal;
+    /* Prevent bold text variations */
+    line-height: 1.2;
+    /* Adjust line spacing */
+    color: #fff;
+    /* Set text color explicitly */
+}
+
+.tab-item:hover {
+    border: 2px solid #888 !important;
+    /* Scaled down border width */
+    transition: border 0.3s ease;
+    box-shadow: 0 2.67px 5.33px 0 rgba(0, 0, 0, 0.2),
+        /* Scaled shadows */
+        0 4px 6.67px 0 rgb(255 255 255 / 19%);
+}
